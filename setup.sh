@@ -1,9 +1,9 @@
 #!/bin/bash
-docker stop flask-gunicorn-nginx && docker rm flask-gunicorn-nginx
-docker stop flask-mongo && docker rm flask-mongo
-docker rmi laztoum/flask-gunicorn-nginx && docker rmi laztoum/mongo
+#docker stop flask-gunicorn-nginx && docker rm flask-gunicorn-nginx
+#docker stop flask-mongo && docker rm flask-mongo
+#docker rmi laztoum/flask-gunicorn-nginx && docker rmi laztoum/mongo
 cd docker-base
-#docker build -t laztoum/base -f Dockerfile .
+docker build -t laztoum/base -f Dockerfile .
 cd ../docker-mongo
 docker build -t laztoum/mongo -f Dockerfile .
 docker run --name flask-mongo -d -p 27017:27017 laztoum/mongo
