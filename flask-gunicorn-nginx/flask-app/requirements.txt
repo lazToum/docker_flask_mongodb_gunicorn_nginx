@@ -1,6 +1,7 @@
 Flask
 flask-mongoengine
 Flask-WTF
+Flask-DebugToolbar
 mongoengine
 WTForms
-uwsgi
+gunicorn

@@ -1,6 +1,0 @@
-Flask
-flask-mongoengine
-Flask-WTF
-mongoengine
-WTForms
-uwsgi
