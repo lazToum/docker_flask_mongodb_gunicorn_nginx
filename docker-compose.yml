@@ -1,0 +1,33 @@
+version: '2'
+services:
+  flask-gunicorn-nginx:
+    image: "laztoum/flask-gunicorn-nginx"
+    build:
+      context: ./flask-gunicorn-nginx
+      dockerfile: Dockerfile
+    depends_on:
+      - base
+      - mongo
+    ports:
+      - "80:80"
+    links:
+      - mongo
+    volumes:
+      - ./flask-gunicorn-nginx/flask-app:/flaskApp
+    container_name: flask-gunicorn-nginx
+  mongo:
+    image: "laztoum/mongo"
+    build:
+      context: ./docker-mongo
+      dockerfile: Dockerfile
+    depends_on:
+      - base
+    ports:
+      - "27017:27017"
+    container_name: flask-mongo
+  base:
+    image: "laztoum/base"
+    build:
+      context: ./docker-base
+      dockerfile: Dockerfile
+    container_name: flask-base
