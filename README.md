@@ -1,5 +1,5 @@
 # Docker Playground
-A simple [Docker](https://www.docker.com "Docker") and [Docker Compose](https://docs.docker.com/compose/, "Docker Compose") project. It can be used for flask with mongodb applications development.
+A simple [Docker](https://www.docker.com "Docker") and [Docker Compose](https://docs.docker.com/compose/ "Docker Compose") project. It can be used for flask with mongodb applications development.
 * Three docker images are created:
   * A base image from Ubuntu 16.04, including [gosu](https://github.com/tianon/gosu "gosu") 
   * A mongodb image, with a root user and a database owner
