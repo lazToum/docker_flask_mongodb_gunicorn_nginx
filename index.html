@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Docker flask mongodb gunicorn nginx by lazToum</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Docker flask mongodb gunicorn nginx</h1>
+        <p>Mongoldb, flask, gunicorn and nginx with two containers and flask files shared with host. </p>
+
+        <p class="view"><a href="https://github.com/lazToum/docker_flask_mongodb_gunicorn_nginx">View the Project on GitHub <small>lazToum/docker_flask_mongodb_gunicorn_nginx</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/lazToum/docker_flask_mongodb_gunicorn_nginx/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/lazToum/docker_flask_mongodb_gunicorn_nginx/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/lazToum/docker_flask_mongodb_gunicorn_nginx">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="docker-playground" class="anchor" href="#docker-playground" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/lazToum/docker_flask_mongodb_gunicorn_nginx">Docker Playground</a>
+</h1>
+
+<p><a href="https://github.com/lazToum/docker_flask_mongodb_gunicorn_nginx/blob/master/docker-compose.yml">docker-compose.yml</a></p>
+
+<p>A simple <a href="https://www.docker.com" title="Docker">Docker</a> and <a href="https://docs.docker.com/compose/" title="Docker Compose">Docker Compose</a> project. It can be used for flask with mongodb applications development.</p>
+
+<ul>
+<li>Three docker images are created:
+
+<ul>
+<li>A base <a href="https://hub.docker.com/r/laztoum/base/">image</a> from Ubuntu 16.04, including <a href="https://github.com/tianon/gosu" title="gosu">gosu</a> </li>
+<li>A mongodb <a href="https://hub.docker.com/r/laztoum/mongo/">image</a>, with a root user and a database owner</li>
+<li>A third <a href="https://hub.docker.com/r/laztoum/flask-gunicorn-nginx/">image</a> with flask (project files inside a volume), gunicorn (with the <code>--reload</code> option for autoreload on file change)  and nginx. Flask mongoengine's <a href="https://github.com/MongoEngine/flask-mongoengine/tree/master/examples">example</a> is included.</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<h3>
+<a id="images-and-containers-setup" class="anchor" href="#images-and-containers-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Images and containers setup</h3>
+
+<p>Docker is required. You can either </p>
+
+<ul>
+<li>run <a href="https://github.com/lazToum/docker_flask_mongodb_gunicorn_nginx/blob/master/setup.sh">setup.sh</a> inside the project's root directory or </li>
+<li>install docker-compose <em>version &gt;= 1.6</em> and use the  <a href="https://github.com/lazToum/docker_flask_mongodb_gunicorn_nginx/blob/master/docker-compose.yml">docker-compose.yml</a>. Just run <code>docker-compose up</code> (optionally include the <em>-d</em> option to detach it)
+You can then change anything inside the flask project  <a href="https://github.com/lazToum/docker_flask_mongodb_gunicorn_nginx/tree/master/flask-gunicorn-nginx/flask-app">files</a> and view the changes on <a href="http://localhost">http://localhost</a>.</li>
+</ul>
+
+<h3>
+<a id="start--stop-the-containers" class="anchor" href="#start--stop-the-containers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Start | stop the containers</h3>
+
+<p>either with</p>
+
+<ul>
+<li>
+<code>docker start | stop flask-mongo &amp;&amp; docker start | stop flask-gunicorn-nginx</code> or</li>
+<li>
+<code>docker-compose start|stop</code> inside the folder containing <em>docker-compose.yml</em>
+The mongo container has to start before the flask/gunicorn/nginx container.</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/lazToum">lazToum</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
