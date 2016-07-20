@@ -6,7 +6,7 @@ A simple [Docker](https://www.docker.com "Docker") and [Docker Compose](https://
   * A third image with flask (project files inside a volume), gunicorn (with the `--reload` option for autoreload on file change)  and nginx. Flask mongoengine's [example](https://github.com/MongoEngine/flask-mongoengine/tree/master/examples) is included.
 
 ## Getting Started
-### Iamges and containers setup
+### Images and containers setup
 Docker is required. You can either 
 * run `setup.sh` inside the project's root directory or 
 * install docker-compose *version >= 1.6* and use the docker-compose.yml. Just run `docker-compose up` (optionally include the *-d* option to detach it)
