@@ -9,7 +9,8 @@ A simple [Docker](https://www.docker.com "Docker") and [Docker Compose](https://
 ### Images and containers setup
 Docker is required. You can either 
 * run `setup.sh` inside the project's root directory or 
-* install docker-compose *version >= 1.6* and use the docker-compose.yml. Just run `docker-compose up` (optionally include the *-d* option to detach it)
+* install docker-compose *version >= 1.6* and use the docker-compose.yml. Just run `docker-compose up` (optionally include the *-d* option to detach it) 
+
 You can then change anything inside the flask project [*flask-gunicorn-nginx/flask-app/*](./flask-gunicorn-nginx/flask-app) and view the changes on http://localhost.
 
 ### Start | stop the containers
