@@ -8,10 +8,10 @@ A simple [Docker](https://www.docker.com "Docker") and [Docker Compose](https://
 ## Getting Started 
 Docker is required. You can either 
 * run `setup.sh` inside the project's root directory or 
-* install docker-compose *version >= 6.1* and use the docker-compose.yml. Just run `docker-compose` (optionally include the *-d* option to detach it)
+* install docker-compose *version >= 1.6* and use the docker-compose.yml. Just run `docker-compose` (optionally include the *-d* option to detach it)
 
-### Start|stop the containers either
-* with `docker start|stop flask-mongo && flask-gunicorn-nginx` or
+### Start | stop the containers either
+* with `docker start | stop flask-mongo && flask-gunicorn-nginx` or
 * `docker-compose start|stop` inside the folder containing *docker-compose.yml*
 
 the included folder *flask-gunicorn-nginx/flask-app* is shared with the host and any change made is these files will reload the gunicorn service.
