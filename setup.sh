@@ -1,7 +1,4 @@
 #!/bin/bash
-docker stop flask-gunicorn-nginx && docker rm flask-gunicorn-nginx
-docker stop flask-mongo && docker rm flask-mongo
-docker rmi laztoum/flask-gunicorn-nginx && docker rmi laztoum/mongo && docker rmi laztoum/base
 cd docker-base
 docker build -t laztoum/base -f Dockerfile .
 cd ../docker-mongo
