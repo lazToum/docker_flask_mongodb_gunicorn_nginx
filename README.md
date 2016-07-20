@@ -18,3 +18,6 @@ either with
 * `docker start | stop flask-mongo && docker start | stop flask-gunicorn-nginx` or
 * `docker-compose start|stop` inside the folder containing *docker-compose.yml*
 The mongo container has to start before the flask/gunicorn/nginx container.
+
+## License
+[MIT](./LICENSE.md)
