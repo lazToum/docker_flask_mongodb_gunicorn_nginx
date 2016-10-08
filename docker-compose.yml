@@ -15,6 +15,7 @@ services:
     volumes:
       - ./flask-gunicorn-nginx/flask-app:/flaskApp
     container_name: flask-gunicorn-nginx
+    tty: true
   mongo:
     image: "laztoum/mongo"
     build:
@@ -25,9 +26,11 @@ services:
     ports:
       - "27017:27017"
     container_name: flask-mongo
+    tty: true
   base:
     image: "laztoum/base"
     build:
       context: ./docker-base
       dockerfile: Dockerfile
     container_name: flask-base
+    tty: true
