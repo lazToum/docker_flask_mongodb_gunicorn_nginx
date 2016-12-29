@@ -34,9 +34,9 @@ app.config['DEBUG_TB_PANELS'] = (
 )
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 # workaround for auth on flask-mongoengine https://github.com/MongoEngine/flask-mongoengine/issues/259
-app.before_first_request(
-    lambda: db.connection.authenticate(app.config['MONGODB_SETTINGS'].get('username'),
-                                       app.config['MONGODB_SETTINGS'].get('password')))
+# app.before_first_request(
+    # lambda: db.connection.authenticate(app.config['MONGODB_SETTINGS'].get('username'),
+                                       # app.config['MONGODB_SETTINGS'].get('password')))
 from models import db
 db.init_app(app)
 
